@@ -1,2 +1,5 @@
 # no temp files
 *~
+
+# no class files
+*.class
