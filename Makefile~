@@ -1,0 +1,13 @@
+JC = javac
+JFLAGS = -g	
+SOURCES = ${wildcard *.java */*.cc */*/*.cc}			
+CLASSES = ${SOURCES:.java=.class}
+
+default: 
+	${JC} ${SOURCES}
+
+#.PHONY: clean
+
+clean: 
+	rm ${CLASSES}
+
