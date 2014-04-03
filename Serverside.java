@@ -10,7 +10,7 @@ public class Serverside extends Thread
    public Serverside(int port) throws IOException
    {
       serverSocket = new ServerSocket(port, 0, InetAddress.getByName("0.0.0.0"));
-      serverSocket.setSoTimeout(10000);
+      //serverSocket.setSoTimeout(10000);
    }
 
    public void run()
