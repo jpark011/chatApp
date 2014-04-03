@@ -1,4 +1,4 @@
-package com.linkett.socket_chat;
+//package com.linkett.socket_chat;
 
 import java.net.*;
 import java.io.*;
