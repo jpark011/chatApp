@@ -27,7 +27,7 @@ public class Serverside extends Thread
                   + server.getRemoteSocketAddress());
             DataInputStream in =
                   new DataInputStream(server.getInputStream());
-            System.out.println(in.readUTF());
+            System.out.println(in.readLine());
             DataOutputStream out =
                  new DataOutputStream(server.getOutputStream());
             out.writeUTF("Thank you for connecting to "
