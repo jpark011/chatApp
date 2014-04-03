@@ -19,6 +19,7 @@ public class Serverside extends Thread
       {
          try
          {
+						System.out.println("localhost: " + InetAddress.getLocalHost().getHostAddress());
             System.out.println("Waiting for client on port " +
             serverSocket.getLocalPort() + "...");
             Socket server = serverSocket.accept();
