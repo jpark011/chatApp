@@ -10,15 +10,15 @@ public class MessageSender implements Runnable {
 	public void run() {
 		try {
 			Scanner sc = new Scanner(System.in);
-			OutputStream os = soc.getOutputStream();
+			DataOutputStream dos = new DataOutputStream(soc.getOutputStream());
 			String msg;
 			while(true) {
 				msg = sc.nextLine();
 				if(msg == "quit") {
-					break;
+					System.exit(0);
 				}
 				System.out.println("You typed: " + msg);
-				os.write(msg.getBytes());
+				dos.write(msg.getBytes());
 			}
 		} catch(IOException e) {
 			System.out.println(e.getMessage());
