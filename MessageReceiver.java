@@ -11,10 +11,10 @@ public class MessageReceiver implements Runnable {
 		try {
 			DataInputStream sc = new DataInputStream(soc.getInputStream());
 			String msg;
+			System.out.println("Listening..." + soc.getPort());
 			while(true) {
-				System.out.println("Listening..." + soc.getPort());
 				msg = sc.readUTF();
-				System.out.println(msg);
+				System.out.println(soc.getRemoteSocketAddress() + " says: " + msg);
 			}
 		} catch(IOException e) {
 			System.out.println("Session ended");

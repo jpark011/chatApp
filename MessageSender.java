@@ -17,7 +17,6 @@ public class MessageSender implements Runnable {
 				if(msg == "quit") {
 					System.exit(0);
 				}
-				System.out.println("You typed: " + msg);
 				dos.writeUTF(msg);
 			}
 		} catch(IOException e) {
