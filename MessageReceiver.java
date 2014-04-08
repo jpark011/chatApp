@@ -12,8 +12,8 @@ public class MessageReceiver implements Runnable {
 			DataInputStream sc = new DataInputStream(soc.getInputStream());
 			String msg;
 			while(true) {
-				System.out.println("Listening...");
-				msg = sc.readLine();
+				System.out.println("Listening..." + soc.getPort());
+				msg = sc.readUTF();
 				System.out.println(msg);
 			}
 		} catch(IOException e) {
