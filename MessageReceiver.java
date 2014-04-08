@@ -9,12 +9,12 @@ public class MessageReceiver implements Runnable {
 	}
 	public void run() {
 		try {
-		Scanner sc = new Scanner(soc.getInputStream());
-		String msg;
-		while(true) {
-			msg = sc.nextLine();
-			System.out.println(msg);
-		}
+			Scanner sc = new Scanner(soc.getInputStream());
+			String msg;
+			while(true) {
+				msg = sc.nextLine();
+				System.out.println(msg);
+			}
 		} catch(IOException e) {
 			System.out.println("Session ended");
 		}
