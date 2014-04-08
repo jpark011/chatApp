@@ -9,11 +9,11 @@ public class MessageSender implements Runnable {
 	}
 	public void run() {
 		try {
-			Scanner sc = new Scanner(System.in);
+			DataInputStream sc = new DataInputStream(System.in);
 			DataOutputStream dos = new DataOutputStream(soc.getOutputStream());
 			String msg;
 			while(true) {
-				msg = sc.nextLine();
+				msg = sc.readLine();
 				if(msg == "quit") {
 					System.exit(0);
 				}
