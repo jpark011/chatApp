@@ -12,6 +12,7 @@ public class MessageReceiver implements Runnable {
 			Scanner sc = new Scanner(soc.getInputStream());
 			String msg;
 			while(true) {
+				System.out.println("Listening...");
 				msg = sc.nextLine();
 				System.out.println(msg);
 			}

@@ -17,6 +17,7 @@ public class MessageSender implements Runnable {
 				if(msg == "quit") {
 					break;
 				}
+				System.out.println("You typed: " + msg);
 				os.write(msg.getBytes());
 			}
 		} catch(IOException e) {
