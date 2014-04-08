@@ -13,12 +13,12 @@ public class MessageSender implements Runnable {
 			DataOutputStream dos = new DataOutputStream(soc.getOutputStream());
 			String msg;
 			while(true) {
-				msg = sc.readLine();
+				msg = sc.readUTF();
 				if(msg == "quit") {
 					System.exit(0);
 				}
 				System.out.println("You typed: " + msg);
-				dos.write(msg.getBytes());
+				dos.writeUTF(msg);
 			}
 		} catch(IOException e) {
 			System.out.println(e.getMessage());
