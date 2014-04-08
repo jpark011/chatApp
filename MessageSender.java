@@ -13,7 +13,7 @@ public class MessageSender implements Runnable {
 			DataOutputStream dos = new DataOutputStream(soc.getOutputStream());
 			String msg;
 			while(true) {
-				msg = sc.readUTF();
+				msg = sc.readLine();
 				if(msg == "quit") {
 					System.exit(0);
 				}

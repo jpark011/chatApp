@@ -13,7 +13,7 @@ public class MessageReceiver implements Runnable {
 			String msg;
 			while(true) {
 				System.out.println("Listening...");
-				msg = sc.readUTF();
+				msg = sc.readLine();
 				System.out.println(msg);
 			}
 		} catch(IOException e) {
