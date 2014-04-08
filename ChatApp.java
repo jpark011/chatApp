@@ -3,7 +3,7 @@ import java.io.*;
 
 public class ChatApp {
 	public static void main(String[] args) {
-		Socket cli_soc;
+		Socket cli_soc = null;
 		if(args.length == 1) {	// Serverside app
 			try {
 				ServerSocket svr_soc = new ServerSocket(Integer.parseInt(args[0]), 0, InetAddress.getByName("0.0.0.0"));
